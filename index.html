@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA Report Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="reportForm">
+        <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+        <div class="form-row">
+            <label for="heightFeet">Height (Feet)</label>
+            <input type="number" id="heightFeet" name="heightFeet" required>
+        </div>
+        <div class="form-row">
+            <label for="heightInches">Height (Inches)</label>
+            <input type="number" id="heightInches" name="heightInches" required>
+        </div>
+        <div class="form-row">
+            <label for="currentWeight">Current Weight (lbs)</label>
+            <input type="number" id="currentWeight" name="currentWeight" required>
+        </div>
+        <div class="form-row">
+            <label for="bodyFat">Current Body Fat (%)</label>
+            <input type="number" id="bodyFat" name="bodyFat" required>
+        </div>
+        <div class="form-row">
+            <label for="desiredBodyFat">Desired Body Fat (%)</label>
+            <input type="number" id="desiredBodyFat" name="desiredBodyFat" required>
+        </div>
+        <div class="form-row">
+            <label for="desiredWeight">Desired Total Body Weight (lbs)</label>
+            <input type="number" id="desiredWeight" name="desiredWeight" required>
+        </div>
+
+        <!-- Calculated fields -->
+        <div class="form-row">
+            <label>Calculated Height (inches)</label>
+            <input type="text" id="calculatedHeightInches" readonly>
+        </div>
+        <div class="form-row">
+            <label>Calculated Height (cm)</label>
+            <input type="text" id="calculatedHeightCm" readonly>
+        </div>
+        <div class="form-row">
+            <label>Calculated Weight (kg)</label>
+            <input type="text" id="calculatedWeightKg" readonly>
+        </div>
+        <div class="form-row">
+            <label>Your Current Weight of Body Fat (lbs)</label>
+            <input type="text" id="currentFatWeight" readonly>
+        </div>
+        <div class="form-row">
+            <label>Your Current Lean Body Mass (lbs)</label>
+            <input type="text" id="leanBodyMass" readonly>
+        </div>
+        <div class="form-row">
+            <label>Calculated Desired Weight of Body Fat (lbs)</label>
+            <input type="text" id="desiredFatWeight" readonly>
+        </div>
+        <div class="form-row">
+            <label>Calculated Lean Body Mass at Desired Body Fat (lbs)</label>
+            <input type="text" id="leanMassAtGoal" readonly>
+        </div>
+        <div class="form-row">
+            <label>Calculated Pounds Needed to Lose</label>
+            <input type="text" id="poundsToLose" readonly>
+        </div>
+        <div class="form-row">
+            <label>Calculated Pounds of Body Fat Needed to Lose</label>
+            <input type="text" id="fatPoundsToLose" readonly>
+        </div>
+        <div class="form-row">
+            <label>Calculated Lean Tissue Lost (lbs)</label>
+            <input type="text" id="leanTissueLost" readonly>
+        </div>
+        <div class="form-row">
+            <label>Calculated Total Calories Needed to Burn</label>
+            <input type="text" id="totalCalories" readonly>
+        </div>
+
+        <button type="submit">Generate Report</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
